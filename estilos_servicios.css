@@ -1,0 +1,21 @@
+.container{
+    background-color: aliceblue;
+    display: inline-flex;
+    flex-flow: row wrap;
+    place-content: space-around stretch;
+    align-items: stretch;
+    gap: 4px 8px;
+
+
+}
+.item{
+    flex-basis: content;
+background-color: aqua;
+width: 200px;
+height: 200px;
+flex: 1 1 auto ;
+
+}
+.titulo{
+order: 1 ;
+}
