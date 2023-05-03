@@ -20,11 +20,11 @@
     display: grid;
 
     /* Uso un atajo para definir cuatro filas / una columna */
-    grid-template: 100px auto auto auto / auto;
+    grid-template: 100% 100% 100%/ 100%;
 
     /* Distribuimos el contenido en cada fila */
     grid-template-areas: "header"
-                          "carro"
+                         "carro"
                          "main"
                          "footer";
 
@@ -48,28 +48,28 @@
     color: darkgreen;
     border-radius: 10px;
 }
-.ancho{
-    width: 80%;
-    height: 120px;
-    margin: auto;
-}
-.logo{
-    width: 30%;
-    height: 120px;
-    float: left
-}
-
 /*----------------------------------------------------------------*/
-/* Imagen con bordes redondeados, con limites de tamaño           */
+/* Imagen debajo del Navbar     */
 /*----------------------------------------------------------------*/
-img {
-    border-radius: 30px;
+.img{
+    position: relative;
+    display: inline-block;
+    text-align: center;
     width: 100%;
-    max-width:400px;
-  }
-img.logo{
-    width: 150px;
-    height: 150px;
+}
+.titulo{
+    position: absolute;
+    top:10px;
+    left:10%;
+    color:#a5cd39
+
+}
+.parrafo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
 /*----------------------------------------------------------------*/
 /* Punto de corte para pantallas tipo tablet (menos de 920px)     */
