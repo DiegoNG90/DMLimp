@@ -1,0 +1,104 @@
+@font-face {
+  font-family: GreatVictorian;
+  src: url('../../assets//font/greatvictorian/GreatVictorian-Standard.otf')
+    format('opentype');
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.navbar_main {
+  display: flex;
+  border-bottom: 1px solid gray;
+  max-height: 100%;
+}
+
+@keyframes navShadow {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translateZ(50px);
+    transform: translateZ(50px);
+    -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.navbar_logo {
+  margin-left: 16px;
+  flex-grow: 2;
+}
+
+.navbar_logo img:hover {
+  cursor: pointer;
+  -webkit-animation: navShadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: navShadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.navbar_logo img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.navbar_links {
+  flex-grow: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar_burguer {
+  display: none;
+}
+
+.navbar_btn__container {
+  font-size: 18px;
+}
+
+.navbar_btn a {
+  color: unset;
+  text-decoration: unset;
+}
+
+.navbar_btn {
+}
+
+.navbar_active {
+  font-weight: 700;
+  border-bottom: 1px solid black;
+}
+
+.navbar_active:hover {
+  cursor: not-allowed;
+}
+
+.navbar_enabled {
+  font-weight: 400;
+}
+
+.navbar_enabled:hover {
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar_main {
+    flex-direction: column;
+  }
+  .navbar_burguer {
+    display: block;
+  }
+  .navbar_links {
+    flex-direction: column;
+  }
+}
