@@ -16,10 +16,12 @@
 .contenedor{
     width: 98%;
     margin: auto;
+
 }
 .section{
     width: 100%;
     margin-bottom: 25px;
+    
 }
 /*----------------------------------------------------------------*/
 /* Definimos estilo del banner     */
@@ -109,15 +111,14 @@ footer .contenedor{
     width: 100%;
     text-align: center;
     font-size: 28px;
+    gap: 10px
+    
 
 }
 /*----------------------------------------------------------------*/
 /* Punto de corte para pantallas de escritorio     */
 /*----------------------------------------------------------------*/
 @media (min-width:1024px) {
-    .contenedor {
-        width: 1000px;
-    }
     #banner img{
         margin-top: -200px;
     }
