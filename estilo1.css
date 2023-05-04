@@ -56,3 +56,100 @@
     width: 100%;     
     background-color: #a5cd39;  
 }
+
+
+/*----------------------------------------------------------------*/
+/* Estilo del texto primer cuadro*/
+/*----------------------------------------------------------------*/
+.texto{
+    background-color: #00aaad;
+    color: white;
+    
+}
+/*----------------------------------------------------------------*/
+/* Estilo del texto segunda seccion*/
+/*----------------------------------------------------------------*/
+#otros{
+    padding: 20px;
+}
+
+#otros .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+#otros article{
+    margin: 50px;
+    gap: 25px;
+    
+}
+#otros img{
+    width: 100%;
+    max-width: 280px;
+   
+}
+#otros h3,h4 {
+    text-align: center;
+}
+/*----------------------------------------------------------------*/
+/* Estilo footer/
+/*----------------------------------------------------------------*/
+.copy { 
+    font-size: 20px;  
+}
+footer .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #a5cd39;  
+    justify-content: center;
+    padding-bottom: 25px;
+}
+.redes{
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+
+}
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas de escritorio     */
+/*----------------------------------------------------------------*/
+@media (min-width:1024px) {
+    .contenedor {
+        width: 1000px;
+    }
+    #banner img{
+        margin-top: -200px;
+    }
+}
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas de celular    */
+/*----------------------------------------------------------------*/
+@media (min-width:480px) {
+    #banner h2 {
+        font-size: 40px;
+    }
+    #banner a {
+        margin-top: 25px;
+    }
+}
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas de tablet    */
+/*----------------------------------------------------------------*/
+@media (min-width:768px){
+    #banner {
+        height: 300px;
+        overflow: hidden;
+    }
+    #banner img{
+        height: auto;
+        margin-top: -100px;
+    }
+    .redes{
+        width: auto;
+
+    }
+    footer .contenedor{
+        justify-content: space-between;
+    }
+}
