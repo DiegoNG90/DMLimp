@@ -1,0 +1,39 @@
+#contacto {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+
+.formulario_contacto {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.informacion_contacto {
+  margin-right: 8px;
+}
+
+.h3 {
+  display: inline;
+}
+
+form {
+  min-width: 50%;
+}
+
+@media only screen and (max-width: 650px) {
+  .formulario_contacto {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 650) {
+  .informacion_contacto {
+    margin-right: 0px;
+  }
+}

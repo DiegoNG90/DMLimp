@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./components/navbar/navbar.css" />
     <script defer src="./components/navbar/navbar_burguer.js"></script>
+
+    <link rel="stylesheet" href="estilos_contacto.css" />
     <title>Contacto</title>
+
+    <script defer src="./components//form/form.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -54,11 +58,63 @@
     </header>
     <!-- Navbar fin -->
 
-    <h1>Contacto</h1>
+    <!-- Contacto form -->
+    <main id="contacto">
+      <h1>Contactar</h1>
+      <section class="redes_sociales">
+        <!-- Aca van los ICONS -->
+      </section>
+      <section class="formulario_contacto">
+        <article class="informacion_contacto">
+          <h3>
+            Contactate con nosotros para recibir un presupuesto a tu medida
+          </h3>
+          <p class="direccion">
+            <strong>Esteban Gomez 1067 </strong> <br />Grand Bourg. Buenos Aires
+            <br />Tel: (011) - 1568547501
+          </p>
+        </article>
+        <form>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Nombre</span>
+            <input
+              type="text"
+              class="form-control"
+              id="input-name"
+              placeholder="Escriba su nombre (3 a 150 caracteres)"
+              aria-label="nombre"
+              aria-describedby="nombre"
+              required
+            />
+          </div>
 
-    <p>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate sequi
-      dolore totam nam odit similique blanditiis numquam asdasd asdasd.
-    </p>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Email</span>
+            <input
+              type="email"
+              class="form-control"
+              id="input-email"
+              placeholder="Escriba su email (ie sunombre@servidor.com)"
+              aria-label="email"
+              aria-describedby="email"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <span class="input-group-text">Consulta</span>
+            <textarea
+              class="form-control"
+              id="textarea-consult"
+              placeholder="Escriba su consulta aqui (ie Desearia que me envien un listado de sus precios segun m2 a limpiar, horas y cantidad de personal requerido)"
+              aria-label="Consulta"
+              rows="5"
+            ></textarea>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>FOOTER -> TODO/A completar!</footer>
   </body>
 </html>
