@@ -4,8 +4,13 @@
 }
 
 @font-face {
-  font-family: myFirstFont;
-  src: url(sansation_light.woff);
+  font-family: 'Fugaz One', cursive;
+  src: url(./assets/fonts/Fugaz_One/FugazOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Raleway', sans-serif;
+  src: url(./assets/fonts/Raleway/Raleway-VariableFont_wght.ttf);
 }
 
 #contacto {
@@ -26,6 +31,8 @@ h1 {
   margin-top: 16px;
   margin-bottom: 16px;
   color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
 }
 
 .contact_form {
@@ -38,15 +45,18 @@ h1 {
   border-radius: 4px;
   margin-right: 8px;
   background-color: white;
+  font-family: 'Raleway', sans-serif;
 }
 
 h3 {
   color: var(--verde);
   margin-bottom: 40px;
+  font-family: 'Fugaz One', cursive;
 }
 
 h5 {
   color: var(--aguamarina);
+  font-family: 'Fugaz One', cursive;
 }
 
 form {
