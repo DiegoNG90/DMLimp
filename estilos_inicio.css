@@ -1,0 +1,189 @@
+/*----------------------------------------------------------------*/
+/* Hoja de estilos                                                */
+/*----------------------------------------------------------------*/
+/* Fuente para toda la página */
+@font-face {
+    font-family: GreatVictorian;
+    src: url('../../assets//font/greatvictorian/GreatVictorian-Standard.otf')
+      format('opentype');
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenedor{
+    width: 98%;
+    margin: auto;
+
+}
+.section{
+    width: 100%;
+    margin-bottom: 25px;
+    
+}
+/*----------------------------------------------------------------*/
+/* Definimos estilo del banner     */
+/*----------------------------------------------------------------*/
+#banner{
+    margin-top: 30px;
+    position: relative
+}
+#banner img{
+    width: 100%;
+    height: 100%;
+}
+#banner .contenedor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: white;
+}
+#banner h2{
+    font-size: 28px;
+}
+#banner a{
+   display:block;
+    width: 100px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    border: 3px solid white;
+    background-color: black;
+}
+.footer { 
+    width: 100%;     
+    background-color: #a5cd39;  
+}
+
+/*----------------------------------------------------------------*/
+/* Estilo del texto primer cuadro*/
+/*----------------------------------------------------------------*/
+.texto{
+    background-color: #00aaad;
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+}
+/*----------------------------------------------------------------*/
+/* Estilo del texto segunda seccion*/
+/*----------------------------------------------------------------*/
+#otros{
+    padding: 20px;
+}
+
+#otros .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 60px;
+
+}
+#otros article{
+    margin: 50px;
+    gap: 25px;
+    
+}
+#otros img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+   
+}
+#otros h2,h4 {
+    text-align: center;
+    font-family: 'Fugaz One'
+}
+#otros h4 {
+    text-align: center;
+    color: #00aaad;
+    font-style: italic;
+}
+/*----------------------------------------------------------------*/
+/* Botón whatsapp/
+/*----------------------------------------------------------------*/
+.wsp{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 100px;
+    right: 30px;
+    background: #0df053;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+.wsp:hover {
+    text-decoration: none;
+    color: #0df053;
+    background: #fff;
+}
+/*----------------------------------------------------------------*/
+/* Estilo footer/
+/*----------------------------------------------------------------*/
+.copy { 
+    font-size: 16px;  
+}
+footer .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #a5cd39;  
+    justify-content: center;
+    padding-bottom: 25px;
+}
+.redes{
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    gap: 10px
+}
+.redes a{
+    text-decoration: none;
+}
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas de escritorio     */
+/*----------------------------------------------------------------*/
+@media (min-width:1024px) {
+    #banner img{
+        margin-top: -200px;
+    }
+}
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas de celular    */
+/*----------------------------------------------------------------*/
+@media (min-width:480px) {
+    #banner h2 {
+        font-size: 40px;
+    }
+    #banner a {
+        margin-top: 25px;
+    }
+}
+/*----------------------------------------------------------------*/
+/* Punto de corte para pantallas de tablet    */
+/*----------------------------------------------------------------*/
+@media (min-width:768px){
+    #banner {
+        height: 300px;
+        overflow: hidden;
+    }
+    #banner img{
+        height: auto;
+        margin-top: -100px;
+    }
+    .redes{
+        width: auto;
+
+    }
+    footer .contenedor{
+        justify-content: space-between;
+    }
+}
