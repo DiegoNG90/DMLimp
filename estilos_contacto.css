@@ -1,39 +1,110 @@
+:root {
+  --aguamarina: #00aaad;
+  --verde: #a5cd39;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(sansation_light.woff);
+}
+
 #contacto {
-  margin-right: 16px;
-  margin-left: 16px;
+  margin: 20px 16px 20px 16px;
+  border: 8px solid var(--aguamarina);
+  padding: 8px 8px 20px 8px;
+  border-radius: 22px;
+  background-color: var(--aguamarina);
+  box-shadow: 16px 20px 26px gray;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  -ms-border-radius: 22px;
+  -o-border-radius: 22px;
 }
 
 h1 {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 16px;
   margin-bottom: 16px;
+  color: white;
 }
 
-.formulario_contacto {
+.contact_form {
   display: flex;
   flex: 1 1 auto;
 }
 
-.informacion_contacto {
+.contact_info {
+  padding: 12px;
+  border-radius: 4px;
   margin-right: 8px;
+  background-color: white;
 }
 
-.h3 {
-  display: inline;
+h3 {
+  color: var(--verde);
+  margin-bottom: 40px;
+}
+
+h5 {
+  color: var(--aguamarina);
 }
 
 form {
+  padding: 12px;
+  border-radius: 4px;
   min-width: 50%;
+  background-color: white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+textarea {
+  height: 220px;
 }
 
 @media only screen and (max-width: 650px) {
-  .formulario_contacto {
+  .contact_form {
     flex-direction: column;
   }
 }
 
-@media only screen and (max-width: 650) {
-  .informacion_contacto {
-    margin-right: 0px;
+@media only screen and (max-width: 650px) {
+  #contacto {
+    box-shadow: unset;
   }
+
+  .contact_info {
+    margin-right: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  form {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+}
+
+.warning-feedback {
+  margin-top: 4px;
+  color: rgb(23, 3, 238);
+  font-size: 500;
+  font-size: 14px;
+}
+
+/* PISAR algunos estilos de bootstrap */
+.input-group-text {
+  background-color: whitesmoke;
+  color: var(--aguamarina);
+  font-weight: 600;
+}
+.btn-success {
+  margin-top: 12px;
+  background-color: var(--aguamarina);
+  border: none;
+}
+.btn-success:hover {
+  background-color: var(--verde);
 }

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="estilos_contacto.css" />
     <title>Contacto</title>
 
-    <script defer src="./components//form/form.js"></script>
+    <script defer src="./components/form/form.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -61,21 +61,28 @@
     <!-- Contacto form -->
     <main id="contacto">
       <h1>Contactar</h1>
-      <section class="redes_sociales">
+      <section class="social_media">
         <!-- Aca van los ICONS -->
       </section>
-      <section class="formulario_contacto">
-        <article class="informacion_contacto">
+      <section class="contact_form">
+        <article class="contact_info">
           <h3>
             Contactate con nosotros para recibir un presupuesto a tu medida
           </h3>
-          <p class="direccion">
-            <strong>Esteban Gomez 1067 </strong> <br />Grand Bourg. Buenos Aires
-            <br />Tel: (011) - 1568547501
-          </p>
+          <article class="address">
+            <h5><em>Direccion</em></h5>
+            <p>
+              <strong>Esteban Gomez 1067 </strong> <br />Grand Bourg. Buenos
+              Aires <br />Tel: (011) - 1568547501
+            </p>
+          </article>
+          <article class="email">
+            <h5><em>Email</em></h5>
+            <p>info@dmlimp.com.ar</p>
+          </article>
         </article>
         <form>
-          <div class="input-group mb-3">
+          <div class="input-group mb-3 has-validation">
             <span class="input-group-text" id="basic-addon1">Nombre</span>
             <input
               type="text"
@@ -83,12 +90,15 @@
               id="input-name"
               placeholder="Escriba su nombre (3 a 150 caracteres)"
               aria-label="nombre"
-              aria-describedby="nombre"
+              aria-describedby="input-name"
               required
             />
+            <div class="invalid-feedback">
+              Por favor, ingrese un nombre válido.
+            </div>
           </div>
 
-          <div class="input-group mb-3">
+          <div class="input-group mb-3 has-validation">
             <span class="input-group-text" id="basic-addon1">Email</span>
             <input
               type="email"
@@ -99,17 +109,28 @@
               aria-describedby="email"
               required
             />
+            <div class="invalid-feedback">
+              Por favor, ingrese un email válido.
+            </div>
           </div>
 
-          <div class="input-group">
+          <div class="input-group has-validation">
             <span class="input-group-text">Consulta</span>
             <textarea
               class="form-control"
               id="textarea-consult"
-              placeholder="Escriba su consulta aqui (ie Desearia que me envien un listado de sus precios segun m2 a limpiar, horas y cantidad de personal requerido)"
+              placeholder="Escriba su consulta aqui (ie Desearia que me envien un listado de sus precios segun m2 a limpiar, horas y cantidad de personal requerido). El maximo son 500 caracteres"
               aria-label="Consulta"
               rows="5"
             ></textarea>
+            <div class="invalid-feedback error-feedback"></div>
+            <p class="warning-feedback"></p>
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-success" type="submit">
+              Enviar consulta
+            </button>
           </div>
         </form>
       </section>
