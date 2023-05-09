@@ -4,87 +4,120 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="estilo.css" />
-    <link
+     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="estilos_inicio.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="./components/navbar/navbar.css" />
-
     <script defer src="./components/navbar/navbar_burguer.js"></script>
     <title>DM Limp</title>
   </head>
   <body>
-    <!-- Navbar -->
-  <header>
-    <nav class="navbar_main">
-      <div class="navbar_logo">
-        <img
-          src="../../assets/logo/DMLIMPLogo.png"
-          alt="LOGO DM Limp"
-          width="100"
-          height="100"
-        />
-        <div class="navbar_burger">
-          <div class="navbar_burguer__stripes"></div>
-          <div class="navbar_burguer__stripes"></div>
-          <div class="navbar_burguer__stripes"></div>
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar_main">
+        <div class="navbar_logo">
+          <img
+            src="../../assets/logo/DMLIMPLogo.png"
+            alt="LOGO DM Limp"
+            width="100"
+            height="100"
+          />
+          <div class="navbar_burger">
+            <div class="navbar_burguer__stripes"></div>
+            <div class="navbar_burguer__stripes"></div>
+            <div class="navbar_burguer__stripes"></div>
+          </div>
         </div>
-      </div>
-      <div class="navbar_links">
-        <div class="navbar_btn__container">
-          <button class="navbar_btn navbar_active">Inicio</button>
+        <div class="navbar_links">
+          <div class="navbar_btn__container">
+            <button class="navbar_btn navbar_active">Inicio</button>
+          </div>
+          <div class="navbar_btn__container">
+            <button class="navbar_btn navbar_enabled">
+              <a href="./contacto.html">Contacto</a>
+            </button>
+          </div>
+          <div class="navbar_btn__container">
+            <button class="navbar_btn navbar_enabled">
+              <a href="./servicios.html">Servicios</a>
+            </button>
+          </div>
+          <div class="navbar_btn__container">
+            <button class="navbar_btn navbar_enabled">
+              <a href="./donde_trabajamos.html">¿Donde trabajamos?</a>
+            </button>
+          </div>
         </div>
-        <div class="navbar_btn__container">
-          <button class="navbar_btn navbar_enabled">
-            <a href="./contacto.html">Contacto</a>
-          </button>
-        </div>
-        <div class="navbar_btn__container">
-          <button class="navbar_btn navbar_enabled">
-            <a href="./servicios.html">Servicios</a>
-          </button>
-        </div>
-        <div class="navbar_btn__container">
-          <button class="navbar_btn navbar_enabled">
-            <a href="./donde_trabajamos.html">¿Donde trabajamos?</a>
-          </button>
-        </div>
-      </div>
-    </nav>
-  </header>
-    <!-- Navbar Fin-->
+      </nav>
+    </header>
+    <!-- Navbar fin -->
+    
+    <main>
+        <section id="banner"> 
+            <img src="assets/imagenes/banner.png">
+            <div class="contenedor">
+                <h2>SERVICIOS DE LIMPIEZA PROFESIONAL</h2>
+                <p>Descubra cuál es el mejor servicio para su empresa</p>
+            </div>
+        </section>
+        <section>
+            <div class="texto">
+                <h2>Quienes Somos</h2> <br>
+                <p>
+                Somos una empresa con 10 años en el ámbito de la limpieza profesional,
+                prestando servicio a una prestigiosa cartera de clientes.
+                DM LIMP ha puesto énfasis en brindar soluciones rápidas y efectivas en
+                sus servicios de mantenimiento y limpieza, y servicios tercerizados.
+                <br><br><br><br><br>
+            </p>
+            </div>
+        </section>
+        <section id="otros">
+          <h2>Porqué Elegirnos</h2>
+          <div class="contenedor">
+            <article>
+                <img src="assets/imagenes/img4.jpg">
+                <h4><b>CALIDAD</b></h4>
+            </article>
+            <article>
+                <img src="assets/imagenes/img5.jpg">
+                <h4><b>EXPERIENCIA</b></h4>
+            </article>
+            <article>
+                <img src="assets/imagenes/img6.jpg">
+                <h4><B>COMPROMISO</B></h4>
+            </article>
+          </div>
+        </section>
+    </main>
+    <aside>
+      <a href="https://api.whatsapp.com/send?phone=5491168547501" class="wsp" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+      
+      </a>
+    </aside>
+    <footer>
+        <div class="contenedor">
+       <p class="copy"> DMLimp - Derechos reservados &copy; 2023</p>
+       <div class="redes">
+        <a href="https://www.facebook.com/dmlimp.ar?mibextid=ZbWKwL">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-square-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-square-twitter"></i>
+        </a>
 
-    <!-- INICIO -->
-    <div class="carro">
-      <div class="img">
-        <img src="../../assets//imagenes/img1.jpg" class="foto">
-        <div class="titulo"><b>SERVICIOS DE LIMPIEZA PROFESIONAL</b></div>
-        <div class="parrafo"><b>Lorem, ipsum dolor sit amet consecteturt eos quam? Rem, a repellendus?</b></div>
-      </div>    
-    </div>
-
-      <article class="main">
-        <h2>Quienes Somos</h2>
-        <br />
-        <p>
-          Somos una empresa con 10 años en el ámbito de la limpieza profesional,
-          prestando servicio a una prestigiosa cartera de clientes.
-        </p>
-        <br />
-        <p>
-          DM LIMP ha puesto énfasis en brindar soluciones rápidas y efectivas en
-          sus servicios de mantenimiento y limpieza, y servicios tercerizados.
-        </p>
-      </article>
-
-      <footer class="footer" ; align="center">
-        DMLimp - Derechos reservados ©2023
-        <br />
+       </div>
+        </div>
+        
       </footer>
     </div>
   </body>
 </html>
+
