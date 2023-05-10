@@ -55,14 +55,17 @@ function validateTextareaConsult() {
   const MAX_VALID_LENGTH = 500;
   const VALIDATION_MESSAGES = {
     AVAILABLE_CHARACTERS: 'caracteres disponibles para su consulta',
-    NO_MORE_CHARACTERS:
-      'Lo siento, ha llegado al limite de carateres. No puede escribir más.',
+    CHARACTERS_LIMITS: 'Has llegado al limite de carateres.',
     INVALID_PASTE:
       'El mensaje/consulta que usted está intentando pegar es más largo de 500 caracteres y por ende es invalido.',
+    SHOULD_ELIMINATE_CHARACTERS:
+      'Te has pasado de la cantidad máxima de caracteres. Debes eliminar la siguiente cantidad de caracters: ',
   };
 
   const $textAreaInvalidFeedback = document.querySelector('.error-feedback');
   const $textAreaWarningFeedback = document.querySelector('.warning-feedback');
+
+  let globalTextValue = 0;
   // INPUT Event
   $textareaConsult.addEventListener('input', (event) => {
     const {
@@ -70,43 +73,52 @@ function validateTextareaConsult() {
     } = event;
     const CURRENT_VALUE_LENGTH = value.length;
 
-    // console.log('$remainingAvailableChars', $remainingAvailableChars);
+    $textAreaWarningFeedback.style.color = 'rgb(23, 3, 238)';
 
+    if (CURRENT_VALUE_LENGTH === 500) {
+      $textAreaWarningFeedback.style.color = 'red';
+      $textAreaWarningFeedback.innerHTML =
+        VALIDATION_MESSAGES.CHARACTERS_LIMITS;
+
+      return;
+    }
+    if (CURRENT_VALUE_LENGTH > 500) {
+      $textAreaWarningFeedback.style.color = 'red';
+      $textAreaWarningFeedback.innerHTML =
+        VALIDATION_MESSAGES.SHOULD_ELIMINATE_CHARACTERS +
+        (MAX_VALID_LENGTH - CURRENT_VALUE_LENGTH).toString();
+      return;
+    }
     if (CURRENT_VALUE_LENGTH === 0) {
       resetValidationNode($textareaConsult);
     }
+
     if (CURRENT_VALUE_LENGTH > 0) {
       $textAreaWarningFeedback.innerHTML = `${
         MAX_VALID_LENGTH - CURRENT_VALUE_LENGTH
       } ${VALIDATION_MESSAGES.AVAILABLE_CHARACTERS}`;
     }
+
+    globalTextValue = CURRENT_VALUE_LENGTH;
   });
 
   // KEYPRESS
-  document.addEventListener('keypress', (event) => {
+  document.addEventListener('keydown', (event) => {
     const {
       target: { value },
     } = event;
 
-    if (value.length > MAX_VALID_LENGTH - 2) {
-      $textAreaInvalidFeedback.innerHTML =
-        VALIDATION_MESSAGES.NO_MORE_CHARACTERS;
-      event.preventDefault();
-    }
-  });
+    console.log('event.key', event.key);
 
-  // PASTE
-  document.addEventListener('paste', (event) => {
-    const text = event.clipboardData.getData('text');
+    if (value.length > MAX_VALID_LENGTH - 1) {
+      $textAreaWarningFeedback.style.color = 'red';
+      $textAreaWarningFeedback.innerHTML =
+        VALIDATION_MESSAGES.CHARACTERS_LIMITS;
+      if (event.key !== 'Backspace') {
+        console.log('se mete en el keypress backspace');
 
-    if (text.length >= MAX_VALID_LENGTH) {
-      event.preventDefault();
-      $textAreaInvalidFeedback.innerHTML = VALIDATION_MESSAGES.INVALID_PASTE;
-      invalidateNode($textareaConsult);
-
-      setTimeout(() => {
-        resetValidationNode($textareaConsult);
-      }, 4000);
+        event.preventDefault();
+      }
     }
   });
 }
