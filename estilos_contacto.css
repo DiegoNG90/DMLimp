@@ -38,12 +38,14 @@ h1 {
 .contact_form {
   display: flex;
   flex: 1 1 auto;
+  justify-content: space-around;
 }
 
 .contact_info {
   padding: 12px;
   border-radius: 4px;
   margin-right: 8px;
+  margin-left: 16px;
   background-color: white;
   font-family: 'Raleway', sans-serif;
 }
@@ -89,6 +91,7 @@ textarea {
     margin-right: 0px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+    margin-left: 0px;
   }
 
   form {
