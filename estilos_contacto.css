@@ -129,9 +129,9 @@ dialog {
   -moz-border-radius: 16px;
   -ms-border-radius: 16px;
   -o-border-radius: 16px;
-  left: 40%;
-  top: 40%;
-  translate: -50%, -50%;
+  width: 500px;
+  left: 33%;
+  top: 33%;
 }
 
 dialog div {

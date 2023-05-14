@@ -142,7 +142,7 @@ $openButton.addEventListener('click', () => {
   if (!validateAllInputsBeforeSubmit()) {
     $modalTitle.innerHTML = 'Revise su consulta';
     $modalParagraph.innerHTML =
-      '<b>Su consulta tiene uno o varios campos con errores. Por favor, reviselos y corrijalos para poder enviar su consulta.</b>';
+      '<b>Su consulta tiene uno o varios campos incompletos y/o con errores. Por favor, reviselos y corrijalos para poder enviar su consulta.</b>';
     // AVOID SEND
     $form.onsubmit = (event) => {
       return event.preventDefault();
