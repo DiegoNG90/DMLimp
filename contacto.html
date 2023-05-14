@@ -12,8 +12,14 @@
     <link rel="stylesheet" href="./components/navbar/navbar.css" />
     <script defer src="./components/navbar/navbar_burguer.js"></script>
 
-    <link rel="stylesheet" href="estilos_contacto.css" />
     <title>Contacto</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="estilos_inicio.css" />
+    <link rel="stylesheet" href="estilos_contacto.css" />
 
     <script defer src="./components/form/form.js"></script>
   </head>
@@ -28,7 +34,7 @@
             width="100"
             height="100"
           />
-          <div class="navbar_burger">
+          <div class="navbar_burger hide">
             <div class="navbar_burguer__stripes"></div>
             <div class="navbar_burguer__stripes"></div>
             <div class="navbar_burguer__stripes"></div>
@@ -81,7 +87,7 @@
             <p>info@dmlimp.com.ar</p>
           </article>
         </article>
-        <form>
+        <form action="https://formspree.io/f/xqkojzkq" method="POST">
           <div class="input-group mb-3 has-validation">
             <span class="input-group-text" id="basic-addon1">Nombre</span>
             <input
@@ -90,11 +96,11 @@
               id="input-name"
               placeholder="Escriba su nombre (3 a 150 caracteres)"
               aria-label="nombre"
+              name="nombre"
               aria-describedby="input-name"
-              required
             />
             <div class="invalid-feedback">
-              Por favor, ingrese un nombre válido.
+              Por favor, ingrese un nombre de 3 caracteres o más.
             </div>
           </div>
 
@@ -104,10 +110,10 @@
               type="email"
               class="form-control"
               id="input-email"
+              name="email"
               placeholder="Escriba su email (ie sunombre@servidor.com)"
               aria-label="email"
               aria-describedby="email"
-              required
             />
             <div class="invalid-feedback">
               Por favor, ingrese un email válido.
@@ -121,6 +127,7 @@
               id="textarea-consult"
               placeholder="Escriba su consulta aqui (ie Desearia que me envien un listado de sus precios segun m2 a limpiar, horas y cantidad de personal requerido). El maximo son 500 caracteres"
               aria-label="Consulta"
+              name="consulta"
               rows="5"
             ></textarea>
             <div class="invalid-feedback error-feedback"></div>
@@ -128,7 +135,7 @@
           <p class="warning-feedback"></p>
 
           <div class="col-12">
-            <button class="btn btn-success" type="submit">
+            <button type="submit" class="btn btn-primary" data-open-modal>
               Enviar consulta
             </button>
           </div>
@@ -136,6 +143,40 @@
       </section>
     </main>
 
-    <footer>FOOTER -> TODO/A completar!</footer>
+    <!-- MODAL -->
+    <dialog data-modal>
+      <div>
+        <h3 id="modalTitle"></h3>
+        <p id="modalParagraph"></p>
+
+        <button data-close-modal class="btn btn-danger">Cerrar</button>
+      </div>
+    </dialog>
+
+    <footer>
+      <div class="contenedor">
+        <p class="copy">DMLimp - Derechos reservados &copy; 2023</p>
+        <div class="redes">
+          <a
+            href="https://www.facebook.com/dmlimp.ar?mibextid=ZbWKwL"
+            target="_blank"
+          >
+            <i class="fa-brands fa-square-facebook"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/explore/tags/limpiezahogar/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-square-instagram"></i>
+          </a>
+          <a
+            href="https://twitter.com/search?q=%23limpieza&src=typed_query"
+            target="_blank"
+          >
+            <i class="fa-brands fa-square-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -3,6 +3,13 @@
   --verde: #a5cd39;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
 @font-face {
   font-family: 'Fugaz One', cursive;
   src: url(./assets/fonts/Fugaz_One/FugazOne-Regular.ttf);
@@ -14,9 +21,9 @@
 }
 
 #contacto {
-  margin: 20px 16px 20px 16px;
+  margin: 0px 16px 20px 16px;
   border: 8px solid var(--aguamarina);
-  padding: 8px 8px 20px 8px;
+  padding: 36px 8px 20px 8px;
   border-radius: 22px;
   background-color: var(--aguamarina);
   box-shadow: 16px 20px 26px gray;
@@ -24,6 +31,7 @@
   -moz-border-radius: 22px;
   -ms-border-radius: 22px;
   -o-border-radius: 22px;
+  min-height: 60vh;
 }
 
 h1 {
@@ -76,30 +84,6 @@ textarea {
   height: 220px;
 }
 
-@media only screen and (max-width: 650px) {
-  .contact_form {
-    flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 650px) {
-  #contacto {
-    box-shadow: unset;
-  }
-
-  .contact_info {
-    margin-right: 0px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    margin-left: 0px;
-  }
-
-  form {
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
-  }
-}
-
 .warning-feedback {
   margin-top: 4px;
   color: rgb(23, 3, 238);
@@ -120,4 +104,56 @@ textarea {
 }
 .btn-success:hover {
   background-color: var(--verde);
+}
+
+dialog {
+  padding: 1.5rem;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  width: 500px;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+}
+
+dialog div {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+dialog div button {
+  align-self: center;
+  width: 100px;
+}
+
+@media only screen and (max-width: 650px) {
+  #contacto {
+    box-shadow: unset;
+    margin-top: 36px;
+    padding-top: 8px;
+  }
+
+  .contact_info {
+    margin-right: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin-left: 0px;
+  }
+
+  form {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+
+  .contact_form {
+    flex-direction: column;
+  }
+
+  dialog {
+    width: 350px;
+  }
 }
