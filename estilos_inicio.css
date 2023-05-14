@@ -141,9 +141,11 @@ footer .contenedor {
   text-align: center;
   font-size: 28px;
   gap: 10px;
+
 }
 .redes a {
   text-decoration: none;
+  color:#00aaad
 }
 .redes h3 {
   font-family: 'Fugaz One';
