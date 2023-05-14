@@ -33,7 +33,6 @@ function validateInputName() {
     let isInvalidName = value.length < 3 || value.length > 150 || !validName;
     isInvalidName ? invalidateNode($inputName) : validateNode($inputName);
   });
-  // TODO/ODM - aramar validador con textos correctos!
 }
 
 validateInputName();
@@ -62,10 +61,8 @@ function validateTextareaConsult() {
       'Te has pasado de la cantidad máxima de caracteres. Debes eliminar la siguiente cantidad de caracters: ',
   };
 
-  const $textAreaInvalidFeedback = document.querySelector('.error-feedback');
   const $textAreaWarningFeedback = document.querySelector('.warning-feedback');
 
-  let globalTextValue = 0;
   // INPUT Event
   $textareaConsult.addEventListener('input', (event) => {
     const {
@@ -80,14 +77,15 @@ function validateTextareaConsult() {
       $textAreaWarningFeedback.innerHTML =
         VALIDATION_MESSAGES.CHARACTERS_LIMITS;
 
-      return;
+      return invalidateNode($textareaConsult);
     }
     if (CURRENT_VALUE_LENGTH > 500) {
       $textAreaWarningFeedback.style.color = 'red';
       $textAreaWarningFeedback.innerHTML =
         VALIDATION_MESSAGES.SHOULD_ELIMINATE_CHARACTERS +
         (MAX_VALID_LENGTH - CURRENT_VALUE_LENGTH).toString();
-      return;
+
+      return invalidateNode($textareaConsult);
     }
     if (CURRENT_VALUE_LENGTH === 0) {
       resetValidationNode($textareaConsult);
@@ -98,8 +96,7 @@ function validateTextareaConsult() {
         MAX_VALID_LENGTH - CURRENT_VALUE_LENGTH
       } ${VALIDATION_MESSAGES.AVAILABLE_CHARACTERS}`;
     }
-
-    globalTextValue = CURRENT_VALUE_LENGTH;
+    return validateNode($textareaConsult);
   });
 
   // KEYPRESS
@@ -108,18 +105,60 @@ function validateTextareaConsult() {
       target: { value },
     } = event;
 
-    console.log('event.key', event.key);
-
     if (value.length > MAX_VALID_LENGTH - 1) {
       $textAreaWarningFeedback.style.color = 'red';
       $textAreaWarningFeedback.innerHTML =
         VALIDATION_MESSAGES.CHARACTERS_LIMITS;
       if (event.key !== 'Backspace') {
-        console.log('se mete en el keypress backspace');
-
         event.preventDefault();
       }
     }
   });
 }
 validateTextareaConsult();
+
+// FORM SUBMISSION
+const $form = document.querySelector('form');
+
+function validateAllInputsBeforeSubmit() {
+  const arrayOfInputs = [$inputName, $inputEmail, $textareaConsult];
+  let isValidClassNameArray = [];
+  for (let input of arrayOfInputs) {
+    isValidClassNameArray.push(input.className.split(' ').includes('is-valid'));
+  }
+
+  return isValidClassNameArray.every((className) => className === true);
+}
+
+const $openButton = document.querySelector('[data-open-modal]');
+const $closeButton = document.querySelector('[data-close-modal]');
+const $modal = document.querySelector('[data-modal]');
+const $modalTitle = document.querySelector('#modalTitle');
+const $modalParagraph = document.querySelector('#modalParagraph');
+
+$openButton.addEventListener('click', () => {
+  $modal.showModal();
+
+  if (!validateAllInputsBeforeSubmit()) {
+    $modalTitle.innerHTML = 'Revise su consulta';
+    $modalParagraph.innerHTML =
+      '<b>Su consulta tiene uno o varios campos incompletos y/o con errores. Por favor, reviselos y corrijalos para poder enviar su consulta.</b>';
+    // AVOID SEND
+    $form.onsubmit = (event) => {
+      return event.preventDefault();
+    };
+  } else {
+    $modalTitle.innerHTML = 'Consulta exitosa!';
+    $modalParagraph.innerHTML = `Felicidades ${$inputName.innerHTML}!, su consulta se ha enviado de forma correcta. en breve estaremos respondiendole a la casilla de correo electrónico ${$inputEmail.innerHTML}`;
+    $form.onsubmit = (event) => {};
+  }
+});
+
+$closeButton.addEventListener('click', () => {
+  $modal.close();
+});
+
+// FORM RESET
+window.addEventListener('load', (event) => {
+  $form.reset();
+});
