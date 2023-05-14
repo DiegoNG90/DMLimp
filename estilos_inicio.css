@@ -146,11 +146,12 @@ footer .contenedor {
   text-decoration: none;
 }
 .redes h3 {
-  Font-family: 'Fugaz One';
+  font-family: 'Fugaz One';
   font-style: italic;
   font-size: 18px;
-  margin-left: 20px;
+  margin-right: 20px;
   text-align: center;
+  display: inline;
 }
 /*----------------------------------------------------------------*/
 /* Punto de corte para pantallas de escritorio     */
