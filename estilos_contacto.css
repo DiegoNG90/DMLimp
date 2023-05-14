@@ -3,6 +3,13 @@
   --verde: #a5cd39;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
 @font-face {
   font-family: 'Fugaz One', cursive;
   src: url(./assets/fonts/Fugaz_One/FugazOne-Regular.ttf);
@@ -14,9 +21,9 @@
 }
 
 #contacto {
-  margin: 20px 16px 20px 16px;
+  margin: 0px 16px 20px 16px;
   border: 8px solid var(--aguamarina);
-  padding: 8px 8px 20px 8px;
+  padding: 36px 8px 20px 8px;
   border-radius: 22px;
   background-color: var(--aguamarina);
   box-shadow: 16px 20px 26px gray;
@@ -24,6 +31,7 @@
   -moz-border-radius: 22px;
   -ms-border-radius: 22px;
   -o-border-radius: 22px;
+  min-height: 60vh;
 }
 
 h1 {
@@ -125,6 +133,8 @@ dialog div button {
 @media only screen and (max-width: 650px) {
   #contacto {
     box-shadow: unset;
+    margin-top: 36px;
+    padding-top: 8px;
   }
 
   .contact_info {
