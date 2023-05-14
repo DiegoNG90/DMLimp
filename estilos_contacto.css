@@ -121,3 +121,26 @@ textarea {
 .btn-success:hover {
   background-color: var(--verde);
 }
+
+dialog {
+  padding: 1.5rem;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  left: 40%;
+  top: 40%;
+  translate: -50%, -50%;
+}
+
+dialog div {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+dialog div button {
+  align-self: center;
+  width: 100px;
+}
