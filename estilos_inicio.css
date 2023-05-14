@@ -141,11 +141,10 @@ footer .contenedor {
   text-align: center;
   font-size: 28px;
   gap: 10px;
-
 }
 .redes a {
   text-decoration: none;
-  color:#00aaad
+  color: #00aaad;
 }
 .redes h3 {
   font-family: 'Fugaz One';
@@ -154,6 +153,7 @@ footer .contenedor {
   margin-right: 20px;
   text-align: center;
   display: inline;
+  color: black;
 }
 /*----------------------------------------------------------------*/
 /* Punto de corte para pantallas de escritorio     */
@@ -189,7 +189,16 @@ footer .contenedor {
   .redes {
     width: auto;
   }
+
   footer .contenedor {
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .contenedor {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

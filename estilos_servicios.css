@@ -1,74 +1,95 @@
 @font-face {
-    font-family: GreatVictorian;
-    src: url('../../assets//font/greatvictorian/GreatVictorian-Standard.otf') format('opentype');
+  font-family: GreatVictorian;
+  src: url('../../assets//font/greatvictorian/GreatVictorian-Standard.otf')
+    format('opentype');
 }
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
+body {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100vh;
+}
 
 .slider {
-    width: 90%;
-    height: 500px;
-    background-color: #00aaad;
-    margin: auto;
-    margin-top: 5%;
-    border: 5px solid #a5cd39;
-    border-radius: 15px;
-    overflow: hidden;
+  width: 90%;
+  height: 500px;
+  background-color: #00aaad;
+  margin: auto;
+  margin-top: 5%;
+  border: 5px solid #a5cd39;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .contenedor {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 100% 100% 100% 100%;
-    animation-name: slide;
-    animation-duration: 15s;
-    animation-iteration-count: infinite alternate;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 100% 100% 100% 100%;
+  animation-name: slide;
+  animation-duration: 15s;
+  animation-iteration-count: infinite alternate;
 }
 
-
- div img {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    background-size: cover;
-    background-position: center;
+div img {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
 }
 
 h1 {
-    color: #a5cd39;
-    text-align: center;
-    margin: auto;
-    font-family: fugaz_one;
-    font-size: 3em;
-    margin-top: 5%;
+  color: #a5cd39;
+  text-align: center;
+  margin: auto;
+  font-family: fugaz_one;
+  font-size: 3em;
+  margin-top: 5%;
 }
 
 h2 {
-    position: relative;
-    width: 45%;
-    margin: auto;
-    margin-top: 10%;
-    font-family: fugaz_one;
-    color: #a5cd39;
-    font-size: 3em;
-    text-align: center;
+  position: relative;
+  width: 45%;
+  margin: auto;
+  margin-top: 10%;
+  font-family: fugaz_one;
+  color: #a5cd39;
+  font-size: 3em;
+  text-align: center;
 }
 
 @keyframes slide {
+  0% {
+    margin-left: 0;
+  }
+  20% {
+    margin-left: 0;
+  }
 
-    0% {margin-left: 0;}
-    20%{margin-left: 0;}
+  25% {
+    margin-left: -100;
+  }
+  45% {
+    margin-left: -100;
+  }
 
-    25%{margin-left: -100;}
-    45%{margin-left: -100;}
-        
-    50%{margin-left: -200;}
-    70%{margin-left: -200;}
+  50% {
+    margin-left: -200;
+  }
+  70% {
+    margin-left: -200;
+  }
 
-    75%{margin-left: -300;}
-    100%{margin-left: -300;}
+  75% {
+    margin-left: -300;
+  }
+  100% {
+    margin-left: -300;
+  }
 }
