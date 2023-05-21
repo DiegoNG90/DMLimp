@@ -2,6 +2,8 @@
 
 DMLimp es una empresa de servicios de limpieza.
 
+Si desea ver la página web, aqui le dejamos el link https://dm-limp.netlify.app/
+
 ## Secciones
 
 Para poder transmitir la informacion respecto al modelo de negocios de la empresa, decidimos armar un sitio web separando la información en 4 paginas:
@@ -42,3 +44,11 @@ El equipo de desarrollo utilizó las siguientes tecnologías para hacer su labor
 - VSCode - editor de código
 - Github [link al repositorio](https://github.com/DiegoNG90/DMLimp)
 - Trello [link al workspace](https://trello.com/b/IRHoDvsc/dmlimp-codo-a-codo)
+
+## Equipo de desarrollo
+
+El equipo de desarrolladores web de éste proyecto consta de 3 sujetos:
+
+- Stefania -> Links a su Github y a su Linkedin
+- Karina -> Links a su Github y a su Linkedin
+- Diego -> Links a su Github y a su Linkedin
