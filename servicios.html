@@ -11,8 +11,10 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./components/navbar/navbar.css" />
+    <link rel="stylesheet" href="./components/dolar-tooltip/dolar-tooltip.css">
     <script defer src="./components/navbar/navbar_burguer.js"></script>
     <link rel="stylesheet" href="estilos_servicios.css" />
+    <script defer src="./components/dolar-tooltip/dolar-tooltip.js"></script>
   </head>
 
   <head>
@@ -26,7 +28,6 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./components/navbar/navbar.css" />
-    <script defer src="./components/navbar/navbar_burguer.js"></script>
     <link rel="stylesheet" href="estilos_servicios.css" />
 
     <link
@@ -34,8 +35,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="estilos_inicio.css" />
-
-    <script defer src="./components/form/form.js"></script>
   </head>
 
   <body>
@@ -110,26 +109,61 @@
     </div>
     </main>
 
+    <!-- Dolar inicio-->
+    <aside>
+      <div id="dolar-tooltip">
+        <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+        <svg
+          width="20px"
+          height="20px"
+          viewBox="0 0 24 24"
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-labelledby="dolarIconTitle"
+          stroke="#000000"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          fill="none"
+          color="#000000"
+        >
+          <title id="dolarIconTitle">Dolar</title>
+          <path
+            d="M12 4L12 6M12 18L12 20M15.5 8C15.1666667 6.66666667 14 6 12 6 9 6 8.5 7.95652174 8.5 9 8.5 13.140327 15.5 10.9649412 15.5 15 15.5 16.0434783 15 18 12 18 10 18 8.83333333 17.3333333 8.5 16"
+          />
+        </svg>
+      </div>
+    </aside>
 
-      <footer>
+    <dialog data-modal>
+      <div>
+        <h3>Informacion del dolar</h3>
+        <p id="dolar-oficial"></p>
+        <p id="dolar-blue"></p>
+        <button data-close-modal class="btn btn-danger">Cerrar</button>
+      </div>
+    </dialog>
+
+    <!-- Dolar fin -->
+
+
+    <footer>
       <div class="contenedor">
         <p class="copy"> DMLimp - Derechos reservados &copy; 2023</p>
-        <div>
-         <div class="redes">
-          <h3><B>SEGUÍNOS</B></h3>
-          <a href="https://www.facebook.com/dmlimp.ar?mibextid=ZbWKwL" target="_blank">
-            <i class="fa-brands fa-square-facebook"></i>
-          </a>
-          <a href="https://www.instagram.com/explore/tags/limpiezahogar/" target="_blank">
-            <i class="fa-brands fa-square-instagram"></i>
-          </a>
-          <a href="https://twitter.com/search?q=%23limpieza&src=typed_query" target="_blank">
-            <i class="fa-brands fa-square-twitter"></i>
-          </a>
+      <div>
+      <div class="redes">
+        <h3><B>SEGUÍNOS</B></h3>
+        <a href="https://www.facebook.com/dmlimp.ar?mibextid=ZbWKwL" target="_blank">
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/explore/tags/limpiezahogar/" target="_blank">
+          <i class="fa-brands fa-square-instagram"></i>
+        </a>
+        <a href="https://twitter.com/search?q=%23limpieza&src=typed_query" target="_blank">
+          <i class="fa-brands fa-square-twitter"></i>
+        </a>
         
-       </div>
-      </div>
-        
-      </footer>
+      </div>     
+    </footer>
   </body>
 </html>
