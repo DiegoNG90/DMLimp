@@ -10,12 +10,12 @@ Para poder transmitir la informacion respecto al modelo de negocios de la empres
 
 1. **Inicio** <br>
    Esta seccion habla de quienes somos y los valores centrales de la empresa.
-2. **Contacto** <br>
-   Aquí podrán disponer de maneras de ponerse en contacto con la empresa, sea espacialmente (domicilio) como cibernéticamente (email y un formulario custom)
-3. **Servicios** <br>
+2. **Servicios** <br>
    Se detallan los servicios, ilustrando los mismos con imágenes para que el cliente tenga una aproximación un poco más real y verídica.
-4. **¿Donde trabajamos?** <br>
+3. **¿Donde trabajamos?** <br>
    Por último, donde trabajamos detalla los locaciones/espacios físicos donde desarrollamos nuestras tareas de limpieza.
+4. **Contacto** <br>
+   Aquí podrán disponer de maneras de ponerse en contacto con la empresa, sea espacialmente (domicilio) como cibernéticamente (email y un formulario custom)
 
 Para mayor comodidad del usuario, cada una de las paginas dispone de un menú de navegación y un pie de página con datos relativos a la empresa y a sus redes sociales.
 
