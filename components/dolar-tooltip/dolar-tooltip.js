@@ -1,8 +1,8 @@
 const $dolarIcon = document.querySelector('#dolar-tooltip');
 const $dolarOficial = document.querySelector('#dolar-oficial');
 const $dolarBlue = document.querySelector('#dolar-blue');
-const $dolarModal = document.querySelector('[data-modal]');
-const $closeButtonModal = document.querySelector('[data-close-modal]');
+const $dolarModal = document.querySelector('#modal');
+const $closeButtonModal = document.querySelector('#btn-modal-close');
 
 // API
 const API_URL = 'https://www.dolarsi.com/api/api.php?type=valoresprincipales';

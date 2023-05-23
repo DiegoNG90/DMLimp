@@ -1,6 +1,6 @@
 #dolar-tooltip {
   display: flex;
-  justify-content: end;
+  justify-content: start;
   margin: 4px;
 }
 
@@ -31,7 +31,7 @@
   -webkit-animation: latido 1.5s ease-in-out infinite both;
 }
 
-dialog {
+#modal {
   padding: 1.5rem;
   border-radius: 16px;
   -webkit-border-radius: 16px;
@@ -44,14 +44,11 @@ dialog {
   translate: -50% -50%;
 }
 
-dialog div {
+#modal div {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-}
-
-dialog div button {
 }
 
 @keyframes latido {
