@@ -49,6 +49,6 @@ El equipo de desarrollo utilizó las siguientes tecnologías para hacer su labor
 
 El equipo de desarrolladores web de éste proyecto consta de 3 sujetos:
 
-- Stefania -> Links a su Github y a su Linkedin
-- Karina -> Links a su Github y a su Linkedin
-- Diego -> Links a su Github y a su Linkedin
+- Stefania Monella
+- Karina Campos
+- Diego Gandara
